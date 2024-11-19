@@ -3,12 +3,6 @@
 {% block title %}Servicios{% endblock %}
 {% block content %}
 
-<!-- Imagen introductoria -->
-<section class="page-section about-heading">
-  <div class="container">
-    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{% static 'core/img/cafete1.jpg' %}" alt="Cafés y tés">
-  </div>
-</section>
 
 <!-- Listado de servicios -->
 {% for service in services reversed %}
