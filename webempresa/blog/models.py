@@ -10,12 +10,12 @@ class Category(models.Model):
     updated = models.DateTimeField(auto_now=True,
         verbose_name="Fecha de edición")
  
-class Meta:
-    verbose_name = "categoría"
-    verbose_name_plural = "categorías"
+    class Meta:
+        verbose_name = "categoría"
+        verbose_name_plural = "categorías"
 
-def __str__(self):
- return self.name
+    def __str__(self):
+        return self.name
 class Post(models.Model):
     title = models.CharField(max_length=200,
         verbose_name="Título")
@@ -34,9 +34,9 @@ class Post(models.Model):
     updated = models.DateTimeField(auto_now=True,
         verbose_name="Fecha de edición")
 
-class Meta:
- verbose_name = "entrada"
- verbose_name_plural = "entradas"
+    class Meta:
+        verbose_name = "entrada"
+        verbose_name_plural = "entradas"
  
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
