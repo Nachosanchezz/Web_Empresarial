@@ -5,7 +5,7 @@
 {% block title %}{{category}}{% endblock %}
 
 {% block content %}
-    {% for post in posts %}
+    {% for post in category.posts_set.all %}
     <section class="page-section cta">
         <div class="container">
             <div class="row">
