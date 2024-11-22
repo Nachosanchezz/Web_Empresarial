@@ -4,13 +4,6 @@
 <head>
     {% load static %}
     {% load pages_extras %}
-    {% get_page_list as page_list %}
-    {% for page in page_list %}
-        <a href="{% url 'page' page.id page.title|slugify %}"
-    class="link">
-            {{page.title}}</a> {% if not forloop.last %}·{% endif %}
-{% endfor %}
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -99,6 +92,17 @@
                     </span>
                 </a>
                 {% endif %}
+            </p>
+
+            <!-- Enlaces de las páginas -->
+            <p class="m-0 mbt">
+                {% get_page_list as page_list %}
+                {% for page in page_list %}
+                    <a href="{% url 'page' page.id page.title|slugify %}" class="link">
+                        {{ page.title }}
+                    </a>
+                    {% if not forloop.last %}·{% endif %}
+                {% endfor %}
             </p>
 
             <!-- Políticas y aviso legal -->
