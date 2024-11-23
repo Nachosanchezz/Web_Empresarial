@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import json
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -152,10 +153,13 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.mailtrap.io'  # Cambia esto por tu servidor SMTP
-EMAIL_PORT = 587  # Puerto del servidor
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'Nachosanchezz'  # Usuario del servidor SMTP
-EMAIL_HOST_PASSWORD = '1234'  # Contraseña del servidor SMTP
-DEFAULT_FROM_EMAIL = '1cnachosanchez@gmail.com'
+EMAIL_SETTINGS_FILE = os.path.join(BASE_DIR, 'email_settings.json')
+with open(EMAIL_SETTINGS_FILE) as data_file:
+    email_settings = json.load(data_file)
+
+EMAIL_HOST = email_settings['EMAIL_HOST']
+EMAIL_PORT = email_settings['EMAIL_PORT']
+EMAIL_USE_TLS = email_settings['EMAIL_USE_TLS']
+EMAIL_HOST_USER = email_settings['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = email_settings['EMAIL_HOST_PASSWORD']
+
