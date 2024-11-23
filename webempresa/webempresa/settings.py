@@ -138,8 +138,14 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': 'full',
-        'height': 300,
-        'width': '100%',
-    },
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent',
+'-',
+            'JustifyLeft', 'JustifyCenter', 'JustifyRight',
+'JustifyBlock'],
+            ['Link', 'Unlink']
+        ]
+    }
 }
