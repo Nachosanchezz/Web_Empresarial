@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'ckeditor_uploader',
     'ckeditor',
+    'contact',
     
 ]
 
