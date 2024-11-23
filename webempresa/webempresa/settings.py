@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -150,3 +151,11 @@ CKEDITOR_CONFIGS = {
         ]
     }
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mailtrap.io'  # Cambia esto por tu servidor SMTP
+EMAIL_PORT = 587  # Puerto del servidor
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'Nachosanchezz'  # Usuario del servidor SMTP
+EMAIL_HOST_PASSWORD = '1234'  # Contraseña del servidor SMTP
+DEFAULT_FROM_EMAIL = '1cnachosanchez@gmail.com'
