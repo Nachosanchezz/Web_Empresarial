@@ -8,6 +8,6 @@ class LinkAdmin(admin.ModelAdmin):
         if request.user.groups.filter(name="Personal").exists():
             return ("key", 'name')
         else:
-            return ()
+            return super().get_readonly_fields(request, obj)
 
 admin.site.register(Link, LinkAdmin)
