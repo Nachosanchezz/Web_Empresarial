@@ -18,7 +18,7 @@ def contact(request):
                 subject="La Caffettiera: Nuevo mensaje de contacto",  # Asunto
                 body=f"De {name} <{email}>\n\nEscribió:\n\n{content}",  # Cuerpo
                 from_email=EMAIL_HOST_USER,  # Email de origen
-                to=["isanccal@myuax.com"],  # Cambia por el email destino
+                to=["1cnachosanchez@gmail.com"],  # Cambia por el email destino
                 reply_to=[email]  # Email de respuesta
             )
 
