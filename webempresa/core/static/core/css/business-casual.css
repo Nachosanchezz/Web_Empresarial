@@ -76,7 +76,7 @@ p {
 }
 
 .bg-faded {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgb(255, 255, 255);
 }
 
 #mainNav {
@@ -85,7 +85,7 @@ p {
 }
 
 #mainNav .navbar-brand {
-  color: #e6a756;
+  color: #0f379b;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -94,7 +94,7 @@ p {
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #e6a756;
+  color: #0f379b;
 }
 
 @media (min-width: 992px) {
@@ -105,7 +105,7 @@ p {
     color: rgba(255, 255, 255, 0.4);
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #e6a756;
+    color: #0f379b;
   }
 }
 
@@ -150,7 +150,7 @@ p {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(230, 167, 86, 0.9);
+  background-color: rgb(30, 39, 144)
 }
 
 .cta .cta-inner {
@@ -222,7 +222,7 @@ p {
 
 .list-hours .list-hours-item.today {
   font-weight: bold;
-  color: #e6a756;
+  color: #0f379b;
 }
 
 @media (min-width: 992px) {
@@ -241,11 +241,11 @@ p {
 }
 
 .text-primary {
-  color: #e6a756 !important;
+  color: #ffffff !important;
 }
 
 .bg-primary {
-  background-color: #e6a756 !important;
+  background-color: #0f379b!important;
 }
 
 .btn {
@@ -253,13 +253,13 @@ p {
 }
 
 .btn-primary {
-  background-color: #e6a756;
-  border-color: #e6a756;
+  background-color: #0f379b;
+  border-color: #0f379b;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #df902a;
-  border-color: #df902a;
+  background-color: #0f379b;
+  border-color: #0f379b;
 }
 
 .font-weight-light {
@@ -279,12 +279,12 @@ p {
 }
 
 a.link{
-  color: #df902a;
+  color: #0f379b;
 }
 
 a.link:hover{
   text-decoration: none;
-  color: #e6a756 !important;
+  color: #0f379b !important;
 }
 
 .section-content{
