@@ -98,9 +98,9 @@
             <p class="m-0 mbt">
                 {% get_page_list as page_list %}
                 {% for page in page_list %}
-                    <a href="{% url 'page' page.id page.title|slugify %}" class="link">
-                        {{ page.title }}
-                    </a>
+                <a href="{% url 'page' page.id page.slug %}" class="link">
+                    {{ page.title }}
+                </a>
                     {% if not forloop.last %}·{% endif %}
                 {% endfor %}
             </p>
