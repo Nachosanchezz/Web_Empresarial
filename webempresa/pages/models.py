@@ -9,6 +9,7 @@ class Page(models.Model):
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de Creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de Edición")
     order = models.SmallIntegerField(verbose_name="Orden", default=0)
+    slug = models.SlugField(verbose_name="URL", unique=True, max_length=200)
 
     class Meta:
         verbose_name = "página"
