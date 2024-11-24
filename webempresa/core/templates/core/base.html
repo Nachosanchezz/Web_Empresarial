@@ -101,6 +101,7 @@
                 <a href="{% url 'page' page.id page.slug %}" class="link">
                     {{ page.title }}
                 </a>
+                
                     {% if not forloop.last %}·{% endif %}
                 {% endfor %}
             </p>
