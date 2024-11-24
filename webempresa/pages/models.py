@@ -1,6 +1,6 @@
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
-from django.utils.text import slugify
+
 
 class Page(models.Model):
     title = models.CharField(verbose_name="Título", max_length=200)
@@ -14,12 +14,6 @@ class Page(models.Model):
         verbose_name = "página"
         verbose_name_plural = "páginas"
         ordering = ['order', 'title']
-
-    def save(self, *args, **kwargs):
-        # Generar slug si está vacío
-        if not self.slug:
-            self.slug = slugify(self.title)
-        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.title
