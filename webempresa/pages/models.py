@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
+from django.utils.text import slugify
 
 
 class Page(models.Model):
@@ -17,3 +18,8 @@ class Page(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super(Page, self).save(*args, **kwargs)
