@@ -15,7 +15,7 @@ def contact(request):
 
             # Crear el correo electrónico
             email_message = EmailMessage(
-                subject="La Caffettiera: Nuevo mensaje de contacto",  # Asunto
+                subject="Tesis: Nuevo mensaje de contacto",  # Asunto
                 body=f"De {name} <{email}>\n\nEscribió:\n\n{content}",  # Cuerpo
                 from_email=EMAIL_HOST_USER,  # Email de origen
                 to=["1cnachosanchez@gmail.com"],  # Cambia por el email destino
